@@ -4,7 +4,7 @@ import { API_BASE } from "../Config/Env";
 
 export const sendCampaign = async (data: CampaignData): Promise<CampaignResponse> => {
   try {
-    const response = await axios.post(`${API_BASE}/emails`, data);
+    const response = await axios.post(`${API_BASE}/campaign/emails`, data);
     return response.data;
   } catch (error) {
     console.error('Error sending campaign:', error);

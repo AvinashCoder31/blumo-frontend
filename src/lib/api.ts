@@ -3,7 +3,7 @@ import { store } from '../app/store';
 
 // It's good practice to have the base URL in an environment variable
 // For now, we'll hardcode it for simplicity.
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:4000';
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 const api = axios.create({
   baseURL: API_BASE_URL,

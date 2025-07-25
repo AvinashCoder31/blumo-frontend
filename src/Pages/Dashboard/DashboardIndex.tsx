@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { EnvelopeIcon, PlusIcon } from '@heroicons/react/24/outline';
 import { useAppSelector } from '../../app/hooks';
-
+import { API_BASE } from "../../Config/Env";
 interface CampaignSummary {
   senderMail?: string;
   campaignName?: string;
@@ -18,7 +18,7 @@ export default function DashboardIndex() {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:4000/api/dashboard/summary");
+        const res = await fetch(`${API_BASE}/dashboard/summary`);
         const data = await res.json();
         setTotalEmails(data.totalEmails);
         setCampaigns(data.campaigns || []);
