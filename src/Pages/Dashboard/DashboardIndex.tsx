@@ -18,7 +18,7 @@ export default function DashboardIndex() {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:4000/api/dashboard/summary");
+        const res = await fetch("http://192.168.137.37:4000/api/dashboard/summary");
         const data = await res.json();
         setTotalEmails(data.totalEmails);
         setCampaigns(data.campaigns || []);

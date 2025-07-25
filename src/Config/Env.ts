@@ -1,5 +1,5 @@
 // Backend API Configuration
-export const API_BASE = process.env.REACT_APP_API_BASE_URL || "http://localhost:3000/api";
+export const API_BASE = process.env.REACT_APP_API_BASE_URL || "http://192.168.137.37:4000/api";
 
 // RabbitMQ Configuration (for reference - these will be used by your backend)
 export const RABBITMQ_CONFIG = {
